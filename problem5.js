@@ -1,17 +1,21 @@
 function canPay(changeArray, totalDue) {
-
-    
-
-    let totalChange=0;
-    for(var i=0; i<changeArray.length; i++){
-        totalChange += changeArray[i];
-     
-    }
-
+        
     if(changeArray.length == 0){
         return "Nothing in your array"
     }
+
+    else if(typeof totalDue !== "number" ){
+        return "Provide a valid numer in 2nd parameter"
+    }
+
+
     else{
+
+        let totalChange=0;
+        for(var i=0; i<changeArray.length; i++){
+            totalChange += changeArray[i];
+         
+        }
 
         if(totalChange>=totalDue){
             return true;
@@ -29,7 +33,7 @@ function canPay(changeArray, totalDue) {
 
 
 
-taka=[1,4,5];
+taka=[1,3,5];
 price=10;
 
 const output=canPay(taka, price);
