@@ -1,28 +1,33 @@
 function sortMaker(arr) {
-    if(arr[0]<0 || arr[1]<0){
+    if (arr.length > 2 || arr.length < 2) {
+        return "Provaid a valid array which have two element "
+    }
+
+
+    else if (arr[0] < 0 || arr[1] < 0) {
         return "Invalid Input"
     }
-    else{
+    else {
 
-        if(arr[0] == arr[1]){
+        if (arr[0] == arr[1]) {
             return "equal"
         }
-        else if(arr[0] < arr[1]){
+        else if (arr[0] < arr[1]) {
 
-           [arr[0], arr[1]] =   [arr[1], arr[0]];
-           return arr;
+            [arr[0], arr[1]] = [arr[1], arr[0]];
+            return arr;
 
         }
 
-        else{
+        else {
             return arr;
         }
     }
 
- 
+
 
 }
-const ar=[4,-2]
+const ar = [0, 5]
 
-const output= sortMaker(ar);
+const output = sortMaker(ar);
 console.log(output);
